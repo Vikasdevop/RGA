@@ -5,8 +5,8 @@ from .database import SessionLocal
 from .retrieve import search_documents
 
 router = APIRouter()
-
-openai.api_key = "your-openai-api-key"
+# replace with your openai-api-key
+openai.api_key = "your-openai-api-key" 
 
 @router.get("/ask/")
 def ask_question(query: str, db: Session = Depends(SessionLocal)):
